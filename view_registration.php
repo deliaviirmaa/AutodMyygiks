@@ -14,7 +14,7 @@
     <input type="hidden" name="action" value="registration">
 
     <div class="container table-registration">
-        <h2>Registreerumise vorm</h2>
+        <h2>Registreerimise vorm</h2>
 
         <p></p>
 
@@ -74,7 +74,7 @@
                 </tbody>
             </table>
         </div>
-        <form id="tagasi" method="post" action="view_home.php">
+        <form id="tagasi" method="get" action="view_home.php">
             <button type="submit" class="btn btn-default back-button">Tagasi</button>
         </form>
     </div>

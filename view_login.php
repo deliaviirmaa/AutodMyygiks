@@ -6,51 +6,61 @@
     <link rel="stylesheet" type="text/css" href="Style.css">
 </head>
 <body>
-<form method="post" action="index.php">
+<form method="post" action="index.php" id="login">
 
     <input type="hidden" name="action" value="login">
 
-    <table border="1">
-        <caption>Sisselogimise vorm</caption>
+    <div class="container table-registration">
+        <h2>Sisselogimine</h2>
 
-        <tr>
-            <th>
-                <label for="username-id">Kasutajanimi:</label>
-            </th>
-            <td>
-                <input type="text" name="username" id="username-id" placeholder="Kasutajanimi" size="20">
-            </td>
-        </tr>
+        <p></p>
 
-        <tr>
-            <th>
-                <label for="password-id">Parool:</label>
-            </th>
-            <td>
-                <input type="password" name="password" id="password-id" placeholder="Parool" size="20">
-            </td>
-        </tr>
 
-        <tr>
-            <td colspan="2">
-                <label>
-                    <input type="checkbox" name="remember_me" value="test"> Pea mind meeles
-                </label>
-            </td>
-        </tr>
+        <div class="table-registration">
+            <table class="table table-condensed table-hover">
+                <thead></thead>
+                <tr></tr>
+                <tbody>
+                <tr>
+                    <th>
+                        <label for="username-id">
+                            Kasutajanimi:
+                        </label>
+                    </th>
+                    <td>
+                        <input type="text" name="username" id="username-id" placeholder="Kasutajanimi">
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        <label for="password1-id">
+                            Parool:
+                        </label>
+                    </th>
+                    <td>
+                        <input type="password" name="password" id="password-id" placeholder="Parool" size="20">
+                    </td>
+                </tr>
+                <tr>
+                    <th></th>
 
-        <tr>
-            <td colspan="2">
-                <button type="submit" class="btn btn-default">Logi sisse</button>
-            </td>
-        </tr>
+                </tr>
+                <tr>
+                    <td>
+                    </td>
+                    <td></td>
+                    <td>
+                        <button type="submit">Sisene</button>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <form id="tagasi" method="get" action="view_home.php">
+            <button type="submit" class="btn btn-default back-button">Tagasi</button>
+        </form>
+    </div>
 
-    </table>
-
-</form>
-<form id="tagasi" method="post" action="view_home.php">
-    <button type="submit" class="btn btn-default">Tagasi</button>
-</form>
-
+<script src="alert.js"></script>
 </body>
 </html>
