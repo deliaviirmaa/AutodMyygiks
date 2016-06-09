@@ -65,63 +65,63 @@
                 ?>
                 <tr>
                     <form method="post" action="index.php">
-                        <input type="hidden" name="id" value="<?=$row['id']?>">
-                    <td><?= $index + 1 ?></td>
-                    <td>
-                        <?php
-                        if (isset($_SESSION['edit']) && $row['id'] == $_SESSION['edit']): ?>
-
-                                <input type="text" name="brand" placeholder="<?=$row['mark']?>">
-
-                    <?php
-                        else: ?>
-                        <?= $row['mark'];
-                        endif;?>
-
-                    </td>
-
-
-                    <td>
-                        <?php
-                        if (isset($_SESSION['edit']) && $row['id'] == $_SESSION['edit']): ?>
-
-                            <input type="text" name="model" placeholder="<?=$row['mudel']?>">
-
+                        <input type="hidden" name="id" value="<?= $row['id'] ?>">
+                        <td><?= $index + 1 ?></td>
+                        <td>
                             <?php
-                        else: ?>
-                            <?= $row['mudel'];
-                        endif;?>
+                            if (isset($_SESSION['edit']) && $row['id'] == $_SESSION['edit']): ?>
 
-                    </td>
+                                <input type="text" name="brand" placeholder="<?= $row['mark'] ?>">
 
-                    <td>
-                        <?php
-                        if (isset($_SESSION['edit']) && $row['id'] == $_SESSION['edit']): ?>
+                                <?php
+                            else: ?>
+                                <?= htmlspecialchars($row['mark']);
+                            endif; ?>
 
-                            <input type="text" name="year" placeholder="<?=$row['aasta']?>">
+                        </td>
 
+
+                        <td>
                             <?php
-                        else: ?>
-                            <?= $row['aasta'];
-                        endif;?>
+                            if (isset($_SESSION['edit']) && $row['id'] == $_SESSION['edit']): ?>
 
-                    </td>
+                                <input type="text" name="model" placeholder="<?= $row['mudel'] ?>">
 
-                    <td>
-                        <?php
-                        if (isset($_SESSION['edit']) && $row['id'] == $_SESSION['edit']): ?>
+                                <?php
+                            else: ?>
+                                <?= htmlspecialchars($row['mudel']);
+                            endif; ?>
 
-                            <input type="text" name="price" placeholder="<?=$row['hind']?>">
+                        </td>
 
+                        <td>
                             <?php
-                        else: ?>
-                            <?= $row['hind'];
-                        endif;?>
+                            if (isset($_SESSION['edit']) && $row['id'] == $_SESSION['edit']): ?>
 
-                    </td>
-                    <td><?= $row['kasutaja'] ?></td>
-                    <?php if (isset($_SESSION['login']) && !isset($_SESSION['edit'])): ?>
-                    <td>
+                                <input type="text" name="year" placeholder="<?= $row['aasta'] ?>">
+
+                                <?php
+                            else: ?>
+                                <?= htmlspecialchars($row['aasta']);
+                            endif; ?>
+
+                        </td>
+
+                        <td>
+                            <?php
+                            if (isset($_SESSION['edit']) && $row['id'] == $_SESSION['edit']): ?>
+
+                                <input type="text" name="price" placeholder="<?= $row['hind'] ?>">
+
+                                <?php
+                            else: ?>
+                                <?= htmlspecialchars($row['hind']);
+                            endif; ?>
+
+                        </td>
+                        <td><?= $row['kasutaja'] ?></td>
+                        <?php if (isset($_SESSION['login']) && !isset($_SESSION['edit'])): ?>
+                        <td>
 
                             <input type="hidden" name="action" value="edit">
                             <input type="hidden" name="id" value="<?= $row['id']; ?>">
@@ -130,7 +130,7 @@
                             <div>
                                 <button type="submit" class="glyphicon glyphicon-pencil"></button>
                             </div>
-                        </form>
+                    </form>
                     </td>
                     <td>
                         <div>
@@ -142,14 +142,14 @@
                         </div>
 
                     </td>
-                        <?php
+                    <?php
                     endif;
-                    if(isset($_SESSION['login']) && isset($_SESSION['edit'])):
+                    if (isset($_SESSION['login']) && isset($_SESSION['edit'])):
                         ?>
                         <td>
 
-                                <input type="hidden" name="action" value="update">
-                                <button type="submit" class="btn btn-default back-button">Uuenda</button>
+                            <input type="hidden" name="action" value="update">
+                            <button type="submit" class="btn btn-default back-button">Uuenda</button>
                             </form>
                         </td>
                         <td>

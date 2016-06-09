@@ -8,10 +8,23 @@ document.getElementById('login').addEventListener('submit',
         var kasutajanimi = document.getElementById('username-id').value;
         var parool = (document.getElementById('password-id').value);
 
-        // kontrollime väärtuseid
         if (kasutajanimi == '' || parool == '') {
-            alert('Vigased väärtused!');
-            // Katkestame tavalise submit tegevuse, vastasel korral navigeeriks brauser mujale
+            alert('Täida kõik väljad!');
+            event.preventDefault();
+            return;
+        }
+    });
+document.getElementById('registration').addEventListener('submit',
+
+    function (event) {
+
+        var kasutajanimi = document.getElementById('username-id').value;
+        var isikukood = (document.getElementById('code-id').value);
+        var parool1 = (document.getElementById('password-id').value);
+        var parool2 = (document.getElementById('password2-id').value);
+
+        if (kasutajanimi == '' || isikukood == '' || parool1 == '' || parool2 == '') {
+            alert('Täida kõik väljad!');
             event.preventDefault();
             return;
         }

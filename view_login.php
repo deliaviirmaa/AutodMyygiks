@@ -6,18 +6,19 @@
     <link rel="stylesheet" type="text/css" href="Style.css">
 </head>
 <body>
-<form method="post" action="index.php" id="login">
-
-    <input type="hidden" name="action" value="login">
-
-    <div class="container table-registration">
-        <h2>Sisselogimine</h2>
-
-        <p></p>
 
 
-        <div class="table-registration">
-            <table class="table table-condensed table-hover">
+<div class="container table-registration">
+    <h2>Sisselogimine</h2>
+
+    <p></p>
+
+
+    <div class="table-registration">
+        <table class="table table-condensed table-hover">
+            <form method="post" action="index.php" id="login">
+
+                <input type="hidden" name="action" value="login">
                 <thead></thead>
                 <tr></tr>
                 <tbody>
@@ -54,12 +55,13 @@
                     </td>
                 </tr>
                 </tbody>
-            </table>
-        </div>
-        <form id="tagasi" method="get" action="view_home.php">
-            <button type="submit" class="btn btn-default back-button">Tagasi</button>
-        </form>
+            </form>
+        </table>
     </div>
+    <form id="tagasi" method="get" action="index.php">
+        <button type="submit" class="btn btn-default back-button">Tagasi</button>
+    </form>
+</div>
 
 <script src="alert.js"></script>
 </body>

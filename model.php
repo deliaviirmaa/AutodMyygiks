@@ -21,17 +21,13 @@ function model_get_password($kasutajanimi)
     global $link;
     $query = 'SELECT parool FROM dviirmaa__kasutajad WHERE kasutajanimi=? LIMIT 1';
     $stmt = mysqli_prepare($link, $query);
-    //if (mysqli_error($link)) {
-    //    echo mysqli_error($link);
-    //  exit;
-    //}
+
 
     mysqli_stmt_bind_param($stmt, 's', $kasutajanimi);
     mysqli_stmt_execute($stmt);
     mysqli_stmt_bind_result($stmt, $hash);
     mysqli_stmt_fetch($stmt);
     mysqli_stmt_close($stmt);
-    // kontrollime, kas vabateksti $parool klapib baasis olnud räsiga $hash
     return $hash;
 }
 

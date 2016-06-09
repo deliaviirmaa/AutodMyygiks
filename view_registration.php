@@ -9,17 +9,17 @@
 
 <body>
 
-<form method="post" action="index.php">
 
-    <input type="hidden" name="action" value="registration">
+<div class="container table-registration">
+    <h2>Registreerimise vorm</h2>
 
-    <div class="container table-registration">
-        <h2>Registreerimise vorm</h2>
+    <p></p>
 
-        <p></p>
+    <div class="table-registration">
+        <table class="table table-condensed table-hover">
+            <form method="post" action="index.php" id="registration">
 
-        <div class="table-registration">
-            <table class="table table-condensed table-hover">
+                <input type="hidden" name="action" value="registration">
                 <thead>Täida kõik väljad</thead>
                 <tr></tr>
                 <tbody>
@@ -30,7 +30,7 @@
                         </label>
                     </th>
                     <td>
-                        <input type="text" name="username" id="username-id" placeholder="Kasutajanimi" >
+                        <input type="text" name="username" id="username-id" placeholder="Kasutajanimi">
                     </td>
                 </tr>
                 <tr>
@@ -72,15 +72,15 @@
                     </td>
                 </tr>
                 </tbody>
-            </table>
-        </div>
-        <form id="tagasi" method="get" action="view_home.php">
-            <button type="submit" class="btn btn-default back-button">Tagasi</button>
-        </form>
+            </form>
+        </table>
     </div>
-</form>
+    <form id="tagasi" method="get" action="index.php">
+        <button type="submit" class="btn btn-default back-button">Tagasi</button>
+    </form>
+</div>
 
-
+<script src="alert.js"></script>
 </body>
 
 </html>

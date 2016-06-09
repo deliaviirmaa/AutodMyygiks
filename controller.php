@@ -49,6 +49,6 @@ function controller_uuenda($id,$mark, $mudel, $aasta, $hind)
 
     }
 }
-//kirjutan siia niisama midagi juurde, et proovida sfsdfsdfsdfsdfsdfsdfsdfsdfsdfsdf
+
 
 

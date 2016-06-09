@@ -26,12 +26,12 @@ if($_SERVER['REQUEST_METHOD'] == "POST") {
             controller_lisa($mark, $mudel, $aasta, $hind, $kasutajanimi);
             break;
         case "login":
-            $kasutajanimi = $_POST['username']; // "delia"
+            $kasutajanimi = $_POST['username'];
             $parool = $_POST['password'];
             controller_login($kasutajanimi,$parool);
             break;
         case "registration":
-            $kasutaja = $_POST['username']; // roheline on name
+            $kasutaja = $_POST['username'];
             $parool1 = $_POST['password1'];
             $parool2 = $_POST['password2'];
             $isikukood = $_POST['code'];
@@ -61,11 +61,6 @@ if($_SERVER['REQUEST_METHOD'] == "POST") {
             $hind = $_POST['price'];
             controller_uuenda($id,$mark,$mudel, $aasta, $hind );
             break;
-
         }
-
-
 }
-
 require('view_home.php');
-//var_dump($tester);
